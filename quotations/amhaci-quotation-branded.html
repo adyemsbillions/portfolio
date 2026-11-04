@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AMHACI Website Development Quotation</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#121212; --soft:#4a4a46; --muted:#8a897f; --line:#e4e2da;
+    --purple:#6c5ce7; --lime:#cbf94e; --cream:#f6f4ee;
+    --mono:'Space Mono',ui-monospace,monospace; --sans:'Archivo',system-ui,sans-serif;
+  }
+  @page{size:A4;margin:0}
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:var(--sans);color:var(--ink);font-size:10.5pt;line-height:1.5;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;background:#fff}
+  .page{width:210mm;height:297mm;overflow:hidden;padding:14mm 16mm 12mm;position:relative;display:flex;flex-direction:column}
+  .num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+  /* header */
+  .head{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:9mm;border-bottom:1.5px solid var(--ink)}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand img{height:38px}
+  .brand b{display:block;font-size:17pt;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .brand span{font-family:var(--mono);font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .contact{text-align:right;font-family:var(--mono);font-size:7.5pt;line-height:1.8;color:var(--soft)}
+
+  /* title */
+  .eyebrow{font-family:var(--mono);font-size:7.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--purple);font-weight:700}
+  .title-row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:10mm}
+  h1{font-size:27pt;line-height:1;letter-spacing:-.035em;font-weight:800;margin:3mm 0 0}
+  .date{font-family:var(--mono);font-size:8pt;color:var(--soft);text-align:right}
+  .date b{display:block;font-family:var(--sans);font-size:11pt;color:var(--ink)}
+
+  .client{margin-top:8mm;display:grid;grid-template-columns:1fr 1.25fr;gap:8mm}
+  .client-card{background:var(--cream);border-radius:12px;padding:5mm 6mm}
+  .client-card .eyebrow{color:var(--muted)}
+  .client-card p{margin:2mm 0 0;font-weight:700;font-size:11.5pt;line-height:1.3}
+  .intro{margin:0;color:var(--soft);align-self:center}
+
+  /* table */
+  table{width:100%;border-collapse:separate;border-spacing:0;margin-top:9mm}
+  th,td{padding:2.4mm 4mm;text-align:left;vertical-align:middle}
+  thead th{font-family:var(--mono);font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:400;
+    border-bottom:1.5px solid var(--ink);padding-bottom:3mm}
+  thead th.opt{color:var(--ink);text-align:right}
+  thead th.opt b{display:block;font-family:var(--sans);font-size:10.5pt;letter-spacing:-.01em;text-transform:none;font-weight:800}
+  thead th.opt.pick{background:var(--lime);border-radius:10px 10px 0 0}
+  tbody td{border-bottom:1px solid var(--line)}
+  td.amt{text-align:right;font-weight:600}
+  td.pick{background:#f8fde6}
+  td small{display:block;font-family:var(--mono);font-size:7pt;color:var(--muted);font-weight:400;margin-top:.6mm}
+  .included{font-family:var(--mono);font-size:8pt;font-weight:700;color:var(--purple)}
+  tr.sub td{border-bottom:none;padding-top:4mm;font-weight:700}
+  tr.vat td{color:var(--soft);font-weight:500}
+  tr.vat td.amt{font-weight:500}
+  tr.total td{background:var(--ink);color:#fff;font-weight:800;font-size:12pt;border:none}
+  tr.total td:first-child{border-radius:10px 0 0 10px;font-family:var(--mono);font-size:8.5pt;letter-spacing:.14em;font-weight:700}
+  tr.total td:last-child{border-radius:0 10px 10px 0}
+  tr.total td.pick{background:var(--purple);color:#fff}
+
+  .notes{margin-top:9mm;padding-left:4mm;border-left:3px solid var(--lime)}
+  .notes ul{margin:2mm 0 0;padding-left:4.5mm;color:var(--soft)}
+
+  .foot{margin-top:auto;padding-top:6mm;border-top:1px solid var(--line);display:flex;justify-content:space-between;
+    font-family:var(--mono);font-size:7pt;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <div class="brand">
+      <img src="logo.png" alt="">
+      <div><b>adyems</b><span>Full-stack developer</span></div>
+    </div>
+    <div class="contact">
+      iamadyems@gmail.com<br>
+      +234 906 151 2740<br>
+      Maiduguri, Nigeria
+    </div>
+  </header>
+
+  <div class="title-row">
+    <div>
+      <span class="eyebrow">Quotation</span>
+      <h1>Website Development<br>Quotation</h1>
+    </div>
+    <div class="date">Date<b>3 November 2026</b></div>
+  </div>
+
+  <div class="client">
+    <div class="client-card">
+      <span class="eyebrow">Prepared for</span>
+      <p>African Mental Health Awareness and Care Initiative (AMHACI)</p>
+    </div>
+    <p class="intro">Please find two options for your website project below. Both include domain registration, hosting, security, technical setup, unlimited professional email accounts and a professional fee for website design and development.</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th class="opt">Option 1<b>Standard Hosting</b></th>
+        <th class="opt pick">Option 2<b>High-Speed Hosting</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Domain Registration (1 Year)</td><td class="amt num">₦26,000</td><td class="amt num pick">₦26,000</td></tr>
+      <tr><td>Hosting (12 Months)</td>
+        <td class="amt num">₦54,000<small>₦4,500 × 12 months</small></td>
+        <td class="amt num pick">₦66,000<small>₦5,500 × 12 months</small></td></tr>
+      <tr><td>SSL Certificate</td><td class="amt num">₦9,000</td><td class="amt num pick">₦9,000</td></tr>
+      <tr><td>Domain Privacy Protection</td><td class="amt num">₦12,000</td><td class="amt num pick">₦12,000</td></tr>
+      <tr><td>Technical Setup &amp; Configuration</td><td class="amt num">₦30,000</td><td class="amt num pick">₦30,000</td></tr>
+      <tr><td>Unlimited Professional Email Accounts</td><td class="amt"><span class="included">Included</span></td><td class="amt pick"><span class="included">Included</span></td></tr>
+      <tr><td>Professional Fee<small>Website design and development</small></td><td class="amt num">₦100,000</td><td class="amt num pick">₦100,000</td></tr>
+      <tr class="sub"><td>Subtotal</td><td class="amt num">₦231,000</td><td class="amt num pick">₦243,000</td></tr>
+      <tr class="vat"><td>VAT (7.5%)</td><td class="amt num">₦17,325</td><td class="amt num pick">₦18,225</td></tr>
+      <tr class="total"><td>Grand total</td><td class="amt num">₦248,325</td><td class="amt num pick">₦261,225</td></tr>
+    </tbody>
+  </table>
+
+  <div class="notes">
+    <span class="eyebrow">Quotation notes</span>
+    <ul>
+      <li>Domain and hosting costs cover the first 12 months.</li>
+    </ul>
+  </div>
+
+  <footer class="foot">
+    <span>adyems · iamadyems@gmail.com</span>
+    <span>WhatsApp +234 906 151 2740</span>
+  </footer>
+</div>
+</body>
+</html>
